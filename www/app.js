@@ -5,6 +5,14 @@ const usernameElement = document.querySelector('#username');
 
 async function getUser() {
     // TODO
+    // fetching the url /.auth/me
+    const response = await fetch('/.auth/me');
+    const user = await response.json();
+    // returns the user object
+    console.log(user);
+    if (user) {
+        usernameElement.innerText = user.userDetails;
+    }
 }
 
 async function updateTask() {
@@ -64,3 +72,6 @@ function generateTask(task) {
 
 getUser();
 getTasks();
+
+// configuring endpoints Get https://your-website-url.com/api/tasks-get
+
