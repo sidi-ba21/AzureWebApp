@@ -11,7 +11,7 @@ async function getUser() {
     // returns the user object
     console.log(user);
     if (user) {
-        usernameElement.innerText = user.userDetails;
+        usernameElement.innerText = user.clientPrincipal.userDetails;
     }
 }
 
