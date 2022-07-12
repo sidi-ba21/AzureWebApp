@@ -6,9 +6,9 @@
       "direction": "in",
       "name": "req",
       "methods": [
-        "get"
+        "patch"
       ],
-      "route": "tasks"
+      "route": "tasks/{id}"
     },
     {
       "type": "http",
